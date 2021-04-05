@@ -2,9 +2,9 @@
 
 namespace DecApp.Commands
 {
-    public class MsgCommandHandler : ICommandHandler<MsgCommand>
+    public class MsgCommandHandler : BaseCommandHandler<MsgCommand>
     {
-        public bool Handle(MsgCommand command)
+        public override bool Handle(MsgCommand command)
         {
             MessageBox.Show(command.Text);
             return true;

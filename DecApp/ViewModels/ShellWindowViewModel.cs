@@ -25,7 +25,7 @@ namespace DecApp.ViewModels
         private void test()
         {
             MsgCommand command = new("stringa1");
-            ICommandHandler < MsgCommand > handler = _container.Resolve<ICommandHandler<MsgCommand>>();
+            BaseCommandHandler < MsgCommand > handler = _container.Resolve<BaseCommandHandler<MsgCommand>>();
             handler.Handle(command);
 
         }
