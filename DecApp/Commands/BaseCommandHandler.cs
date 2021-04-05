@@ -17,6 +17,7 @@ namespace DecApp.Commands
 
             return (TWrapper)genericConstructorInfo.Invoke(new object[] { this });
         }
+        
 
     }
 }

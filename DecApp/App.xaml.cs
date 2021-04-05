@@ -30,6 +30,7 @@ namespace DecApp
             BaseCommandHandler<MsgCommand> four = new MsgCommandHandler()
                 .WrappedIn<TwoTimesDecorator<MsgCommand>>()
                 .WrappedIn<TwoTimesDecorator<MsgCommand>>();
+
             container.Register<BaseCommandHandler<MsgCommand>>(() => four);
                 
             
